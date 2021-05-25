@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculadora</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="icon_calc.png" type="image/x-icon" />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box">
+            <div id="select__dm">
+                <label>Dark Mode:</label>
+                <select id="dm" onchange="dm()">
+                    <option value="on">ON</option>
+                    <option value="off">OFF</option>
+                </select>
+            </div>
+            <h1>Calculadora</h1>
+            <div class="box__display">
+                <input type="text" id="resultado" placeholder="0">
+            </div>
+            <div class="box__btn">
+                <button class="c" onclick="calc('action','c')">C</button>
+            </div>
+            <div class="box__btn">
+                <button class="btn_num" onclick="calc('val', 9)">9</button>
+                <button class="btn_num" onclick="calc('val', 8)">8</button>
+                <button class="btn_num" onclick="calc('val', 7)">7</button>
+                <button class="btn_num" onclick="calc('action','+')">+</button>
+            </div>
+            <div class="box__btn">
+                <button class="btn_num" onclick="calc('val', 6)">6</button>
+                <button class="btn_num" onclick="calc('val', 5)">5</button>
+                <button class="btn_num"  onclick="calc('val', 4)">4</button>
+                <button class="btn_num" onclick="calc('action','/')">/</button>
+            </div>
+            <div class="box__btn">
+                <button class="btn_num" onclick="calc('val', 3)">3</button>
+                <button class="btn_num" onclick="calc('val', 2)">2</button>
+                <button class="btn_num" onclick="calc('val', 1)">1</button>
+                <button class="btn_num" onclick="calc('action','*')">*</button>
+            </div>
+            <div class="box__btn">
+                <button class="btn_num" onclick="calc('action','.')">.</button>
+                <button class="btn_num" onclick="calc('val', 0)">0</button>
+                <button class="btn_num" onclick="calc('action','-')">-</button>
+                <button class="btn_num" onclick="calc('action','=')">=</button>
+            </div>
+        </div>
+        <div class="history" id="history">
+            <h2>Historico</h2>
+            <dl>
+                <dt id="hist_calc">Calculos:</dt>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>
